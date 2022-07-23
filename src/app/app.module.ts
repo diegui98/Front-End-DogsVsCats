@@ -9,9 +9,15 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DogsComponent } from './components/dogs/dogs.component';
+import { DogsVsCatsComponent } from './components/dogsVsCats/dogsVsCats.component';
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent, DogsComponent],
+  declarations: [
+    AppComponent,
+    WelcomeComponent,
+    DogsComponent,
+    DogsVsCatsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

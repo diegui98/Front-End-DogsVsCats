@@ -1,0 +1,108 @@
+<h1>Lets see which one is cuter</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-3">Dog Rating: 10</div>
+    <div class="col-3">All Dogs Rating: 9</div>
+    <div class="col-3">Cat Rating: 10</div>
+    <div class="col-3">All Cats Rating: 9</div>
+  </div>
+  <div class="row">
+    <div class="col-5">
+      <img alt="dog" [src]="randomDog" />
+    </div>
+    <div class="col-2">VS</div>
+    <div class="col-5">
+      <img alt="cat" [src]="randomCat" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">Dogs Points: 0</div>
+    <div class="col-4">Cats Points: 0</div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <button class="btn btn-secondary" (click)="petSelection('dog')">
+        Dog
+      </button>
+    </div>
+    <div class="col-8">
+      <span *ngIf="!badLastRating">
+        <button
+          class="btn btn-danger btn-rate"
+          [ngClass]="{ disabled: !petSelected }"
+          (click)="onRateButton(1)"
+        >
+          1
+        </button>
+        <button
+          class="btn btn-danger btn-rate"
+          [ngClass]="{ disabled: !petSelected }"
+          (click)="onRateButton(2)"
+        >
+          2
+        </button>
+        <button
+          class="btn btn-danger btn-rate"
+          [ngClass]="{ disabled: !petSelected }"
+          (click)="onRateButton(3)"
+        >
+          3
+        </button>
+        <button
+          class="btn btn-warning btn-rate"
+          [ngClass]="{ disabled: !petSelected }"
+          (click)="onRateButton(4)"
+        >
+          4
+        </button>
+        <button
+          class="btn btn-warning btn-rate"
+          [ngClass]="{ disabled: !petSelected }"
+          (click)="onRateButton(5)"
+        >
+          5
+        </button>
+        <button
+          class="btn btn-warning btn-rate"
+          [ngClass]="{ disabled: !petSelected }"
+          (click)="onRateButton(6)"
+        >
+          6
+        </button>
+      </span>
+      <button
+        class="btn btn-success btn-rate"
+        [ngClass]="{ disabled: !petSelected }"
+        (click)="onRateButton(7)"
+      >
+        7
+      </button>
+      <button
+        class="btn btn-success btn-rate"
+        [ngClass]="{ disabled: !petSelected }"
+        (click)="onRateButton(8)"
+      >
+        8
+      </button>
+      <button
+        class="btn btn-success btn-rate"
+        [ngClass]="{ disabled: !petSelected }"
+        (click)="onRateButton(9)"
+      >
+        9
+      </button>
+      <button
+        class="btn btn-primary btn-rate"
+        [ngClass]="{ disabled: !petSelected }"
+        (click)="onRateButton(10)"
+      >
+        10
+      </button>
+    </div>
+    <div class="col-2">
+      <button class="btn btn-secondary" (click)="petSelection('cat')">
+        Cat
+      </button>
+    </div>
+  </div>
+</div>

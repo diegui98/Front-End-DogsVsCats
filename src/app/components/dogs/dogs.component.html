@@ -2,11 +2,17 @@
 <div class="container">
   <div class="row">
     <div class="col-3">Dog Rating: 10</div>
-    <div class="col-6"><img alt="dog" [src]="randomDog" /></div>
+    <div class="col-6">
+      <img *ngIf="randomCatChance !== 1" alt="dog" [src]="randomDog" /><img
+        *ngIf="randomCatChance == 1"
+        alt="cat"
+        [src]="randomCat"
+      />
+    </div>
     <div class="col-3">All Dogs Rating: 9</div>
   </div>
   <div class="row">
-    <div class="container-8">
+    <div class="col-8">
       <span *ngIf="!badLastRating">
         <div class="btn btn-danger" (click)="onRateButton(1)">1</div>
         <div class="btn btn-danger" (click)="onRateButton(2)">2</div>
