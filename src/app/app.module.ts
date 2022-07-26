@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DogsComponent } from './components/dogs/dogs.component';
 import { DogsVsCatsComponent } from './components/dogsVsCats/dogsVsCats.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { DogsVsCatsComponent } from './components/dogsVsCats/dogsVsCats.componen
     SweetAlert2Module.forRoot(),
     HttpClientModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

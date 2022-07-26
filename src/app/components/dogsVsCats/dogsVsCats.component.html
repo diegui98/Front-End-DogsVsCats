@@ -1,108 +1,268 @@
-<h1>Lets see which one is cuter</h1>
 <div class="container">
+  <h1 class="text-center text-white title">Lets see which one is cuter</h1>
   <div class="row">
-    <div class="col-3">Dog Rating: 10</div>
-    <div class="col-3">All Dogs Rating: 9</div>
-    <div class="col-3">Cat Rating: 10</div>
-    <div class="col-3">All Cats Rating: 9</div>
-  </div>
-  <div class="row">
-    <div class="col-5">
-      <img alt="dog" [src]="randomDog" />
+    <div class="col col-md-5">
+      <div class="row">
+        <div class="col-6">
+          <div class="card text-white bg-success">
+            <div class="card-body">
+              <h3 class="card-title text-center">Dog Rating</h3>
+              <div class="container-fluid text-center">
+                <h1 class="card-text">10</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card text-white bg-danger">
+            <div class="card-body">
+              <h3 class="card-title text-center">Dogs Wins</h3>
+              <div class="container-fluid text-center">
+                <h1 class="card-text">0</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-2">VS</div>
-    <div class="col-5">
-      <img alt="cat" [src]="randomCat" />
+    <div class="col-md-2"></div>
+    <div class="col col-md-5">
+      <div class="row">
+        <div class="col-6">
+          <div class="card text-white bg-info">
+            <div class="card-body">
+              <h3 class="card-title text-center">Cat Wins</h3>
+              <div class="container-fluid text-center">
+                <h1 class="card-text">0</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card text-white bg-success">
+            <div class="card-body">
+              <h3 class="card-title text-center">Cat Rating</h3>
+              <div class="container-fluid text-center">
+                <h1 class="card-text">10</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-4">Dogs Points: 0</div>
-    <div class="col-4">Cats Points: 0</div>
+  <div class="row img-row">
+    <div class="col-5 img-col">
+      <img
+        class="border border-danger rounded img-pet"
+        alt="dog"
+        [src]="randomDog"
+      />
+    </div>
+    <div class="col-2">
+      <img class="vs-img" src="../../../assets/competencia.png" alt="VS" />
+    </div>
+    <div class="col-5 img-col">
+      <img
+        class="border border-info rounded img-pet"
+        alt="cat"
+        [src]="randomCat"
+      />
+    </div>
   </div>
   <div class="row">
     <div class="col-2">
-      <button class="btn btn-secondary" (click)="petSelection('dog')">
-        Dog
-      </button>
+      <div class="row">
+        <div class="col-4">
+          <svg
+            *ngIf="petToRate == 'dog'"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"
+            />
+          </svg>
+        </div>
+        <div class="col-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M332.7 19.85C334.6 8.395 344.5 0 356.1 0C363.6 0 370.6 3.52 375.1 9.502L392 32H444.1C456.8 32 469.1 37.06 478.1 46.06L496 64H552C565.3 64 576 74.75 576 88V112C576 156.2 540.2 192 496 192H426.7L421.6 222.5L309.6 158.5L332.7 19.85zM448 64C439.2 64 432 71.16 432 80C432 88.84 439.2 96 448 96C456.8 96 464 88.84 464 80C464 71.16 456.8 64 448 64zM416 256.1V480C416 497.7 401.7 512 384 512H352C334.3 512 320 497.7 320 480V364.8C295.1 377.1 268.8 384 240 384C211.2 384 184 377.1 160 364.8V480C160 497.7 145.7 512 128 512H96C78.33 512 64 497.7 64 480V249.8C35.23 238.9 12.64 214.5 4.836 183.3L.9558 167.8C-3.331 150.6 7.094 133.2 24.24 128.1C41.38 124.7 58.76 135.1 63.05 152.2L66.93 167.8C70.49 182 83.29 191.1 97.97 191.1H303.8L416 256.1z"
+            />
+          </svg>
+        </div>
+        <div class="col-4">
+          <svg
+            *ngIf="petToRate == 'dog'"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="row">
+        <button (click)="petSelection('dog')" class="btn-64">
+          <span class="bg-primary text-white"> Dog</span>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-12 text-white text-center">Total Dogs Avg: 0</div>
+      </div>
     </div>
     <div class="col-8">
-      <span *ngIf="!badLastRating">
-        <button
-          class="btn btn-danger btn-rate"
-          [ngClass]="{ disabled: !petSelected }"
-          (click)="onRateButton(1)"
+      <div class="row">
+        <div
+          class="btn-toolbar"
+          role="toolbar"
+          aria-label="Toolbar with button groups"
         >
-          1
-        </button>
-        <button
-          class="btn btn-danger btn-rate"
-          [ngClass]="{ disabled: !petSelected }"
-          (click)="onRateButton(2)"
-        >
-          2
-        </button>
-        <button
-          class="btn btn-danger btn-rate"
-          [ngClass]="{ disabled: !petSelected }"
-          (click)="onRateButton(3)"
-        >
-          3
-        </button>
-        <button
-          class="btn btn-warning btn-rate"
-          [ngClass]="{ disabled: !petSelected }"
-          (click)="onRateButton(4)"
-        >
-          4
-        </button>
-        <button
-          class="btn btn-warning btn-rate"
-          [ngClass]="{ disabled: !petSelected }"
-          (click)="onRateButton(5)"
-        >
-          5
-        </button>
-        <button
-          class="btn btn-warning btn-rate"
-          [ngClass]="{ disabled: !petSelected }"
-          (click)="onRateButton(6)"
-        >
-          6
-        </button>
-      </span>
-      <button
-        class="btn btn-success btn-rate"
-        [ngClass]="{ disabled: !petSelected }"
-        (click)="onRateButton(7)"
-      >
-        7
-      </button>
-      <button
-        class="btn btn-success btn-rate"
-        [ngClass]="{ disabled: !petSelected }"
-        (click)="onRateButton(8)"
-      >
-        8
-      </button>
-      <button
-        class="btn btn-success btn-rate"
-        [ngClass]="{ disabled: !petSelected }"
-        (click)="onRateButton(9)"
-      >
-        9
-      </button>
-      <button
-        class="btn btn-primary btn-rate"
-        [ngClass]="{ disabled: !petSelected }"
-        (click)="onRateButton(10)"
-      >
-        10
-      </button>
+          <div class="btn-group" role="group">
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-danger btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(1)"
+            >
+              1
+            </button>
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-danger btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(2)"
+            >
+              2
+            </button>
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-danger btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(3)"
+            >
+              3
+            </button>
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-warning btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(4)"
+            >
+              4
+            </button>
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-warning btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(5)"
+            >
+              5
+            </button>
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-warning btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(6)"
+            >
+              6
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(7)"
+            >
+              7
+            </button>
+            <button
+              type="button"
+              class="btn btn-success btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(8)"
+            >
+              8
+            </button>
+            <button
+              type="button"
+              class="btn btn-success btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(9)"
+            >
+              9
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(10)"
+            >
+              10
+            </button>
+          </div>
+          <div class="row">
+            <span *ngIf="petToRate" class="text-white"
+              >Nice! Now lets give your {{ petToRate }} a rating</span
+            >
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="col-2">
-      <button class="btn btn-secondary" (click)="petSelection('cat')">
-        Cat
-      </button>
+      <div class="row">
+        <div class="col-4">
+          <svg
+            *ngIf="petToRate == 'cat'"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"
+            />
+          </svg>
+        </div>
+        <div class="col-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M322.6 192C302.4 192 215.8 194 160 278V192c0-53-43-96-96-96C46.38 96 32 110.4 32 128s14.38 32 32 32s32 14.38 32 32v256c0 35.25 28.75 64 64 64h176c8.875 0 16-7.125 16-15.1V480c0-17.62-14.38-32-32-32h-32l128-96v144c0 8.875 7.125 16 16 16h32c8.875 0 16-7.125 16-16V289.9c-10.25 2.625-20.88 4.5-32 4.5C386.2 294.4 334.5 250.4 322.6 192zM480 96h-64l-64-64v134.4c0 53 43 95.1 96 95.1s96-42.1 96-95.1V32L480 96zM408 176c-8.875 0-16-7.125-16-16s7.125-16 16-16s16 7.125 16 16S416.9 176 408 176zM488 176c-8.875 0-16-7.125-16-16s7.125-16 16-16s16 7.125 16 16S496.9 176 488 176z"
+            />
+          </svg>
+        </div>
+        <div class="col-4">
+          <svg
+            *ngIf="petToRate == 'cat'"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="row">
+        <button (click)="petSelection('cat')" class="btn-64">
+          <span class="bg-primary text-white"> cat</span>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-12 text-white text-center">Total Cats Avg: 0</div>
+      </div>
     </div>
   </div>
 </div>

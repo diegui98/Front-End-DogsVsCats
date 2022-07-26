@@ -1,0 +1,11 @@
+img {
+  width: 100%;
+}
+
+.btn-group {
+  width: 90%;
+}
+
+.btn-toolbar {
+  place-content: center;
+}

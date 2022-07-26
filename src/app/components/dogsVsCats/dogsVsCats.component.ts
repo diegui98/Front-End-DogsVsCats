@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CatsService } from 'src/app/services/cats.service';
 import { DogsService } from 'src/app/services/dogs.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import Swal from 'sweetalert2';
 
 @Component({
