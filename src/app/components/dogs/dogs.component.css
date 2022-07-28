@@ -9,3 +9,17 @@ img {
 .btn-toolbar {
   place-content: center;
 }
+
+.img-col {
+  max-height: 75vmin;
+  margin-bottom: 2vh;
+}
+
+.img-pet {
+  max-height: 100%;
+}
+
+.bottom-container {
+  position: absolute;
+  bottom: 2%;
+}

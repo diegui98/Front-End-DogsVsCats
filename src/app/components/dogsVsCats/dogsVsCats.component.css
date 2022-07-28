@@ -7,11 +7,11 @@ img {
 }
 
 .img-row {
-  height: 62vh;
 }
 
 .img-col {
-  max-height: 60vh;
+  max-height: 63vmin;
+  margin-bottom: 2vmin;
 }
 
 .img-pet {
@@ -19,12 +19,17 @@ img {
 }
 
 .vs-img {
-  margin-top: 10vh;
+  margin-top: 10vmin;
 }
 
 .card {
-  height: 15vh;
+  max-height: 25vmin;
   margin-bottom: 3%;
+}
+
+.bottom-container {
+  position: absolute;
+  bottom: 2%;
 }
 
 .btn-group {

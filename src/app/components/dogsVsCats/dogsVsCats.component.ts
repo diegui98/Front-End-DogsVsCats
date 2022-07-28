@@ -301,5 +301,7 @@ export class DogsVsCatsComponent implements OnInit {
         });
       }
     }
+    this.petToRate = '';
+    this.petSelected = !this.petSelected;
   }
 }

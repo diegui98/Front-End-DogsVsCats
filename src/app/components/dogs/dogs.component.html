@@ -1,84 +1,167 @@
-<h1>Your Dogs are ready!</h1>
+<h1 class="text-center text-white">Your Dogs are ready!</h1>
 <div class="container">
-  <div class="row">
-    <div class="col-3">Dog Rating: 10</div>
-    <div class="col-6">
-      <img *ngIf="randomCatChance !== 1" alt="dog" [src]="randomDog" /><img
+  <div class="row justify-content-center">
+    <div class="col-10 col-md-3 mb-1">
+      <div class="card text-white bg-success">
+        <div class="card-body">
+          <h3 class="card-title text-center">Dog Rating</h3>
+          <div class="container-fluid text-center">
+            <h1 *ngIf="randomCatChance !== 1" class="card-text">10</h1>
+            <h1 *ngIf="randomCatChance == 1" class="card-text">!?</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9 col-md-6 img-col">
+      <img
+        class="border border-success rounded img-pet"
+        *ngIf="randomCatChance !== 1"
+        alt="dog"
+        [src]="randomDog"
+      /><img
+        class="border border-danger rounded img-pet"
         *ngIf="randomCatChance == 1"
         alt="cat"
         [src]="randomCat"
       />
     </div>
-    <div class="col-3">All Dogs Rating: 9</div>
+    <div class="col-10 col-md-3">
+      <div class="card text-white bg-primary">
+        <div class="card-body">
+          <h3 class="card-title text-center">All Dogs Average</h3>
+          <div class="container-fluid text-center">
+            <h1 class="card-text">10</h1>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-8">
-      <div
-        class="btn-toolbar"
-        role="toolbar"
-        aria-label="Toolbar with button groups"
-      >
-        <div class="btn-group" role="group">
-          <div
-            *ngIf="!badLastRating"
-            type="button"
-            class="btn btn-danger"
-            (click)="onRateButton(1)"
-          >
-            1
+  <div class="container bottom-container">
+    <div class="row justify-content-center">
+      <div class="col-4 col-sm-2">
+        <div class="row">
+          <div class="col-6">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"
+              />
+            </svg>
           </div>
-          <div
-            *ngIf="!badLastRating"
-            type="button"
-            class="btn btn-danger"
-            (click)="onRateButton(2)"
-          >
-            2
+          <div class="col-6">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M332.7 19.85C334.6 8.395 344.5 0 356.1 0C363.6 0 370.6 3.52 375.1 9.502L392 32H444.1C456.8 32 469.1 37.06 478.1 46.06L496 64H552C565.3 64 576 74.75 576 88V112C576 156.2 540.2 192 496 192H426.7L421.6 222.5L309.6 158.5L332.7 19.85zM448 64C439.2 64 432 71.16 432 80C432 88.84 439.2 96 448 96C456.8 96 464 88.84 464 80C464 71.16 456.8 64 448 64zM416 256.1V480C416 497.7 401.7 512 384 512H352C334.3 512 320 497.7 320 480V364.8C295.1 377.1 268.8 384 240 384C211.2 384 184 377.1 160 364.8V480C160 497.7 145.7 512 128 512H96C78.33 512 64 497.7 64 480V249.8C35.23 238.9 12.64 214.5 4.836 183.3L.9558 167.8C-3.331 150.6 7.094 133.2 24.24 128.1C41.38 124.7 58.76 135.1 63.05 152.2L66.93 167.8C70.49 182 83.29 191.1 97.97 191.1H303.8L416 256.1z"
+              />
+            </svg>
           </div>
-          <div
-            *ngIf="!badLastRating"
-            type="button"
-            class="btn btn-danger"
-            (click)="onRateButton(3)"
-          >
-            3
-          </div>
-          <div
-            *ngIf="!badLastRating"
-            type="button"
-            class="btn btn-warning"
-            (click)="onRateButton(4)"
-          >
-            4
-          </div>
-          <div
-            *ngIf="!badLastRating"
-            type="button"
-            class="btn btn-warning"
-            (click)="onRateButton(5)"
-          >
-            5
-          </div>
-          <div
-            *ngIf="!badLastRating"
-            type="button"
-            class="btn btn-warning"
-            (click)="onRateButton(6)"
-          >
-            6
-          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-8 p-0">
+        <div
+          class="btn-toolbar"
+          role="toolbar"
+          aria-label="Toolbar with button groups"
+        >
+          <div class="btn-group" role="group">
+            <div
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-danger"
+              (click)="onRateButton(1)"
+            >
+              1
+            </div>
+            <div
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-danger"
+              (click)="onRateButton(2)"
+            >
+              2
+            </div>
+            <div
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-danger"
+              (click)="onRateButton(3)"
+            >
+              3
+            </div>
+            <div
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-warning"
+              (click)="onRateButton(4)"
+            >
+              4
+            </div>
+            <div
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-warning"
+              (click)="onRateButton(5)"
+            >
+              5
+            </div>
+            <div
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-warning"
+              (click)="onRateButton(6)"
+            >
+              6
+            </div>
 
-          <div type="button" class="btn btn-success" (click)="onRateButton(7)">
-            7
+            <div
+              type="button"
+              class="btn btn-success"
+              (click)="onRateButton(7)"
+            >
+              7
+            </div>
+            <div
+              type="button"
+              class="btn btn-success"
+              (click)="onRateButton(8)"
+            >
+              8
+            </div>
+            <div
+              type="button"
+              class="btn btn-success"
+              (click)="onRateButton(9)"
+            >
+              9
+            </div>
+            <div
+              type="button"
+              class="btn btn-primary"
+              (click)="onRateButton(10)"
+            >
+              10
+            </div>
           </div>
-          <div type="button" class="btn btn-success" (click)="onRateButton(8)">
-            8
+        </div>
+      </div>
+      <div class="col-4 col-sm-2">
+        <div class="row">
+          <div class="col-6">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M332.7 19.85C334.6 8.395 344.5 0 356.1 0C363.6 0 370.6 3.52 375.1 9.502L392 32H444.1C456.8 32 469.1 37.06 478.1 46.06L496 64H552C565.3 64 576 74.75 576 88V112C576 156.2 540.2 192 496 192H426.7L421.6 222.5L309.6 158.5L332.7 19.85zM448 64C439.2 64 432 71.16 432 80C432 88.84 439.2 96 448 96C456.8 96 464 88.84 464 80C464 71.16 456.8 64 448 64zM416 256.1V480C416 497.7 401.7 512 384 512H352C334.3 512 320 497.7 320 480V364.8C295.1 377.1 268.8 384 240 384C211.2 384 184 377.1 160 364.8V480C160 497.7 145.7 512 128 512H96C78.33 512 64 497.7 64 480V249.8C35.23 238.9 12.64 214.5 4.836 183.3L.9558 167.8C-3.331 150.6 7.094 133.2 24.24 128.1C41.38 124.7 58.76 135.1 63.05 152.2L66.93 167.8C70.49 182 83.29 191.1 97.97 191.1H303.8L416 256.1z"
+              />
+            </svg>
           </div>
-          <div type="button" class="btn btn-success" (click)="onRateButton(9)">
-            9
-          </div>
-          <div type="button" class="btn btn-primary" (click)="onRateButton(10)">
-            10
+          <div class="col-6">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"
+              />
+            </svg>
           </div>
         </div>
       </div>
