@@ -1,6 +1,35 @@
-<h1>Welcome to the Good Dog List</h1>
-<p>
-  We need your help to rate every single dog in the world, so they can enter the
-  Good Dog List!
-</p>
-<button routerLink="/dogs" class="btn btn-success">Lets Go!</button>
+<div class="container-fluid text-white text-center">
+  <div class="row">
+    <h1>Welcome to the Good Dog List</h1>
+  </div>
+  <div class="row content-center">
+    <div class="col-6 col-sm-6 col-md-3">
+      <img class="border border-success rounded" [src]="randomDog1" alt="Dog" />
+    </div>
+    <div class="col-6 col-sm-6 col-md-6">
+      <div class="row content-center">
+        <div class="col-10">
+          <img src="../../../assets/paw-love.png" alt="paw love" />
+        </div>
+      </div>
+      <div class="row">
+        <p>
+          We need your help to rate every single dog in the world, so they can
+          enter the Good Dog List!
+        </p>
+      </div>
+      <div class="row">
+        <button routerLink="/dogs" class="btn-76 btn btn-success">
+          Lets Go!
+          <span class="top"></span>
+          <span class="right"></span>
+          <span class="bottom"></span>
+          <span class="left"></span>
+        </button>
+      </div>
+    </div>
+    <div class="col-10 col-sm-10 col-md-3 mt-1">
+      <img class="border border-success rounded" [src]="randomDog2" alt="Dog" />
+    </div>
+  </div>
+</div>
