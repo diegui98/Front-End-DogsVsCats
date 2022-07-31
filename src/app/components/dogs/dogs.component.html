@@ -6,7 +6,12 @@
         <div class="card-body">
           <h3 class="card-title text-center">Dog Rating</h3>
           <div class="container-fluid text-center">
-            <h1 *ngIf="randomCatChance !== 1" class="card-text">10</h1>
+            <h1 *ngIf="randomCatChance !== 1" class="card-text">
+              <span *ngIf="dogScore.dogRating !== 0">{{
+                dogScore.dogRating
+              }}</span>
+              <span *ngIf="dogScore.dogRating == 0">10</span>
+            </h1>
             <h1 *ngIf="randomCatChance == 1" class="card-text">!?</h1>
           </div>
         </div>
@@ -30,7 +35,7 @@
         <div class="card-body">
           <h3 class="card-title text-center">All Dogs Average</h3>
           <div class="container-fluid text-center">
-            <h1 class="card-text">10</h1>
+            <h1 class="card-text">{{ dogScore.dogAvg }}</h1>
           </div>
         </div>
       </div>
