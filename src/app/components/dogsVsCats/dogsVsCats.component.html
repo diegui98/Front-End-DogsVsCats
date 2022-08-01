@@ -8,7 +8,12 @@
             <div class="card-body">
               <h3 class="card-title text-center">Dog Rating</h3>
               <div class="container-fluid text-center">
-                <h1 class="card-text">10</h1>
+                <h1 class="card-text">
+                  <span *ngIf="dogScore.dogRating !== 0">{{
+                    dogScore.dogRating
+                  }}</span>
+                  <span *ngIf="dogScore.dogRating == 0">10</span>
+                </h1>
               </div>
             </div>
           </div>
@@ -18,7 +23,7 @@
             <div class="card-body">
               <h3 class="card-title text-center">Dogs Wins</h3>
               <div class="container-fluid text-center">
-                <h1 class="card-text">0</h1>
+                <h1 class="card-text">{{ dogScore.dogWins }}</h1>
               </div>
             </div>
           </div>
@@ -33,7 +38,7 @@
             <div class="card-body">
               <h3 class="card-title text-center">Cat Wins</h3>
               <div class="container-fluid text-center">
-                <h1 class="card-text">0</h1>
+                <h1 class="card-text">{{ catScore.catWins }}</h1>
               </div>
             </div>
           </div>
@@ -43,7 +48,12 @@
             <div class="card-body">
               <h3 class="card-title text-center">Cat Rating</h3>
               <div class="container-fluid text-center">
-                <h1 class="card-text">10</h1>
+                <h1 class="card-text">
+                  <span *ngIf="catScore.catRating !== 0">
+                    {{ catScore.catRating }}</span
+                  >
+                  <span *ngIf="catScore.catRating == 0">10</span>
+                </h1>
               </div>
             </div>
           </div>
@@ -113,7 +123,9 @@
           </button>
         </div>
         <div class="row">
-          <div class="col-12 text-white text-center">Total Dogs Avg: 0</div>
+          <div class="col-12 text-white text-center">
+            Total Dogs Avg: {{ dogScore.dogAvg }}
+          </div>
         </div>
       </div>
       <div class="col-12 col-sm-12 col-md-8 p-0">
@@ -264,7 +276,9 @@
           </button>
         </div>
         <div class="row">
-          <div class="col-12 text-white text-center">Total Cats Avg: 0</div>
+          <div class="col-12 text-white text-center">
+            Total Cats Avg: {{ catScore.catAvg }}
+          </div>
         </div>
       </div>
     </div>

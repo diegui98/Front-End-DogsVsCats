@@ -4,7 +4,9 @@
     <div class="col-10 col-md-3 mb-1">
       <div class="card text-white bg-success">
         <div class="card-body">
-          <h3 class="card-title text-center">Dog Rating</h3>
+          <h3 class="card-title text-center">
+            Dog Rating<span *ngIf="randomCatChance == 1">!?</span>
+          </h3>
           <div class="container-fluid text-center">
             <h1 *ngIf="randomCatChance !== 1" class="card-text">
               <span *ngIf="dogScore.dogRating !== 0">{{
@@ -12,7 +14,12 @@
               }}</span>
               <span *ngIf="dogScore.dogRating == 0">10</span>
             </h1>
-            <h1 *ngIf="randomCatChance == 1" class="card-text">!?</h1>
+            <h1 *ngIf="randomCatChance == 1" class="card-text">
+              <span *ngIf="catScore.catRating !== 0">{{
+                catScore.catRating
+              }}</span>
+              <span *ngIf="catScore.catRating == 0">10</span>
+            </h1>
           </div>
         </div>
       </div>
