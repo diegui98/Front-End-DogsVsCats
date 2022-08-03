@@ -12,7 +12,12 @@ img {
 
 .img-col {
   max-height: 75vmin;
-  margin-bottom: 2vh;
+  margin-bottom: 2vmin;
+}
+
+.img-12-col {
+  height: -webkit-fill-available;
+  max-height: 100%;
 }
 
 .img-pet {
@@ -21,5 +26,5 @@ img {
 
 .bottom-container {
   position: absolute;
-  bottom: 2%;
+  bottom: 1vmin;
 }

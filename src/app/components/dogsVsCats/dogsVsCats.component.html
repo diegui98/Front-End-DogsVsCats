@@ -1,9 +1,9 @@
-<div class="container">
-  <h1 class="text-center text-white title">Lets see which one is cuter</h1>
+<h1 class="text-center text-white title">Lets see which one is cuter</h1>
+<div class="container-fluid">
   <div class="row">
-    <div class="col col-md-5">
+    <div class="col-6 col-md-5">
       <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="card text-white bg-success">
             <div class="card-body">
               <h3 class="card-title text-center">Dog Rating</h3>
@@ -18,7 +18,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="card text-white bg-danger">
             <div class="card-body">
               <h3 class="card-title text-center">Dogs Wins</h3>
@@ -29,11 +29,22 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-2"></div>
-    <div class="col col-md-5">
       <div class="row">
-        <div class="col-6">
+        <div class="col-12 img-col">
+          <img
+            class="border border-danger rounded img-pet"
+            alt="dog"
+            [src]="randomDog"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="sm-hide col-2">
+      <img class="vs-img" src="../../../assets/competencia.png" alt="VS" />
+    </div>
+    <div class="col-6 col-md-5">
+      <div class="row">
+        <div class="col-12 col-md-6">
           <div class="card text-white bg-info">
             <div class="card-body">
               <h3 class="card-title text-center">Cat Wins</h3>
@@ -43,7 +54,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="card text-white bg-success">
             <div class="card-body">
               <h3 class="card-title text-center">Cat Rating</h3>
@@ -59,30 +70,20 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-12 img-col">
+          <img
+            class="border border-info rounded img-pet"
+            alt="cat"
+            [src]="randomCat"
+          />
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row img-row">
-    <div class="col-5 img-col">
-      <img
-        class="border border-danger rounded img-pet"
-        alt="dog"
-        [src]="randomDog"
-      />
-    </div>
-    <div class="col-2">
-      <img class="vs-img" src="../../../assets/competencia.png" alt="VS" />
-    </div>
-    <div class="col-5 img-col">
-      <img
-        class="border border-info rounded img-pet"
-        alt="cat"
-        [src]="randomCat"
-      />
-    </div>
-  </div>
-  <div class="container bottom-container p-0">
-    <div class="row justify-content-center">
-      <div class="col-6 col-sm-6 col-md-2">
+  <div class="row bottom-container p-0 justify-content-center">
+    <div class="row bottom-row-buttons bottom-row-buttons-sm">
+      <div class="col-5 col-sm-5 col-md-2">
         <div class="row">
           <div class="col-4">
             <svg
@@ -128,114 +129,9 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-8 p-0">
-        <div class="row">
-          <div class="col-12 p-0">
-            <div
-              class="btn-toolbar"
-              role="toolbar"
-              aria-label="Toolbar with button groups"
-            >
-              <div class="btn-group" role="group">
-                <button
-                  *ngIf="!badLastRating"
-                  type="button"
-                  class="btn btn-danger btn-rate"
-                  [ngClass]="{ disabled: !petSelected }"
-                  (click)="onRateButton(1)"
-                >
-                  1
-                </button>
-                <button
-                  *ngIf="!badLastRating"
-                  type="button"
-                  class="btn btn-danger btn-rate"
-                  [ngClass]="{ disabled: !petSelected }"
-                  (click)="onRateButton(2)"
-                >
-                  2
-                </button>
-                <button
-                  *ngIf="!badLastRating"
-                  type="button"
-                  class="btn btn-danger btn-rate"
-                  [ngClass]="{ disabled: !petSelected }"
-                  (click)="onRateButton(3)"
-                >
-                  3
-                </button>
-                <button
-                  *ngIf="!badLastRating"
-                  type="button"
-                  class="btn btn-warning btn-rate"
-                  [ngClass]="{ disabled: !petSelected }"
-                  (click)="onRateButton(4)"
-                >
-                  4
-                </button>
-                <button
-                  *ngIf="!badLastRating"
-                  type="button"
-                  class="btn btn-warning btn-rate"
-                  [ngClass]="{ disabled: !petSelected }"
-                  (click)="onRateButton(5)"
-                >
-                  5
-                </button>
-                <button
-                  *ngIf="!badLastRating"
-                  type="button"
-                  class="btn btn-warning btn-rate"
-                  [ngClass]="{ disabled: !petSelected }"
-                  (click)="onRateButton(6)"
-                >
-                  6
-                </button>
+      <div class="col-2 col-sm-2 col-md-8"></div>
 
-                <button
-                  type="button"
-                  class="btn btn-success btn-rate"
-                  [ngClass]="{ disabled: !petSelected }"
-                  (click)="onRateButton(7)"
-                >
-                  7
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-success btn-rate"
-                  [ngClass]="{ disabled: !petSelected }"
-                  (click)="onRateButton(8)"
-                >
-                  8
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-success btn-rate"
-                  [ngClass]="{ disabled: !petSelected }"
-                  (click)="onRateButton(9)"
-                >
-                  9
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-rate"
-                  [ngClass]="{ disabled: !petSelected }"
-                  (click)="onRateButton(10)"
-                >
-                  10
-                </button>
-              </div>
-              <div class="row">
-                <span *ngIf="petToRate" class="text-white"
-                  >Nice! Now lets give your {{ petToRate }} a rating</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-sm-6 col-md-2">
+      <div class="col-5 col-sm-5 col-md-2">
         <div class="row">
           <div class="col-4">
             <svg
@@ -278,6 +174,110 @@
         <div class="row">
           <div class="col-12 text-white text-center">
             Total Cats Avg: {{ catScore.catAvg }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row w-70">
+      <div class="col-12 p-0 mb-2">
+        <div
+          class="btn-toolbar"
+          role="toolbar"
+          aria-label="Toolbar with button groups"
+        >
+          <div class="btn-group" role="group">
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-danger btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(1)"
+            >
+              1
+            </button>
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-danger btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(2)"
+            >
+              2
+            </button>
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-danger btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(3)"
+            >
+              3
+            </button>
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-warning btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(4)"
+            >
+              4
+            </button>
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-warning btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(5)"
+            >
+              5
+            </button>
+            <button
+              *ngIf="!badLastRating"
+              type="button"
+              class="btn btn-warning btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(6)"
+            >
+              6
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(7)"
+            >
+              7
+            </button>
+            <button
+              type="button"
+              class="btn btn-success btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(8)"
+            >
+              8
+            </button>
+            <button
+              type="button"
+              class="btn btn-success btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(9)"
+            >
+              9
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-rate"
+              [ngClass]="{ disabled: !petSelected }"
+              (click)="onRateButton(10)"
+            >
+              10
+            </button>
+          </div>
+          <div class="row">
+            <span *ngIf="petToRate" class="text-white"
+              >Nice! Now lets give your {{ petToRate }} a rating</span
+            >
           </div>
         </div>
       </div>

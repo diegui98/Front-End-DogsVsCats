@@ -6,9 +6,6 @@ img {
   width: 100%;
 }
 
-.img-row {
-}
-
 .img-col {
   max-height: 63vmin;
   margin-bottom: 2vmin;
@@ -19,17 +16,39 @@ img {
 }
 
 .vs-img {
-  margin-top: 10vmin;
+  margin-top: 22vmin;
 }
 
 .card {
   max-height: 25vmin;
   margin-bottom: 3%;
+  --bs-card-spacer-y: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .sm-hide {
+    display: none;
+  }
+
+  .bottom-row-buttons-sm {
+    position: relative !important;
+  }
 }
 
 .bottom-container {
   position: absolute;
-  bottom: 2%;
+  bottom: 0;
+  width: 90%;
+  left: 5%;
+}
+
+.bottom-row-buttons {
+  position: absolute;
+  bottom: 0;
+}
+
+.w-70 {
+  width: 70%;
 }
 
 .btn-group {

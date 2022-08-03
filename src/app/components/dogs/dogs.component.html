@@ -1,50 +1,56 @@
 <h1 class="text-center text-white">Your Dogs are ready!</h1>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-10 col-md-3 mb-1">
-      <div class="card text-white bg-success">
-        <div class="card-body">
-          <h3 class="card-title text-center">
-            Dog Rating<span *ngIf="randomCatChance == 1">!?</span>
-          </h3>
-          <div class="container-fluid text-center">
-            <h1 *ngIf="randomCatChance !== 1" class="card-text">
-              <span *ngIf="dogScore.dogRating !== 0">{{
-                dogScore.dogRating
-              }}</span>
-              <span *ngIf="dogScore.dogRating == 0">10</span>
-            </h1>
-            <h1 *ngIf="randomCatChance == 1" class="card-text">
-              <span *ngIf="catScore.catRating !== 0">{{
-                catScore.catRating
-              }}</span>
-              <span *ngIf="catScore.catRating == 0">10</span>
-            </h1>
+    <div class="col-12 col-sm-12 col-md-4">
+      <div class="row">
+        <div class="col-6 col-md-12 mb-1">
+          <div class="card text-white bg-success">
+            <div class="card-body">
+              <h3 class="card-title text-center">
+                Dog Rating<span *ngIf="randomCatChance == 1">!?</span>
+              </h3>
+              <div class="container-fluid text-center">
+                <h1 *ngIf="randomCatChance !== 1" class="card-text">
+                  <span *ngIf="dogScore.dogRating !== 0">{{
+                    dogScore.dogRating
+                  }}</span>
+                  <span *ngIf="dogScore.dogRating == 0">10</span>
+                </h1>
+                <h1 *ngIf="randomCatChance == 1" class="card-text">
+                  <span *ngIf="catScore.catRating !== 0">{{
+                    catScore.catRating
+                  }}</span>
+                  <span *ngIf="catScore.catRating == 0">10</span>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-12">
+          <div class="card text-white bg-primary">
+            <div class="card-body">
+              <h3 class="card-title text-center">All Dogs Average</h3>
+              <div class="container-fluid text-center">
+                <h1 class="card-text">{{ dogScore.dogAvg }}</h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-9 col-md-6 img-col">
-      <img
-        class="border border-success rounded img-pet"
-        *ngIf="randomCatChance !== 1"
-        alt="dog"
-        [src]="randomDog"
-      /><img
-        class="border border-danger rounded img-pet"
-        *ngIf="randomCatChance == 1"
-        alt="cat"
-        [src]="randomCat"
-      />
-    </div>
-    <div class="col-10 col-md-3">
-      <div class="card text-white bg-primary">
-        <div class="card-body">
-          <h3 class="card-title text-center">All Dogs Average</h3>
-          <div class="container-fluid text-center">
-            <h1 class="card-text">{{ dogScore.dogAvg }}</h1>
-          </div>
-        </div>
+    <div class="col-12 col-sm-12 col-md-8 img-col">
+      <div class="col-12 img-12-col">
+        <img
+          class="border border-success rounded img-pet"
+          *ngIf="randomCatChance !== 1"
+          alt="dog"
+          [src]="randomDog"
+        /><img
+          class="border border-danger rounded img-pet"
+          *ngIf="randomCatChance == 1"
+          alt="cat"
+          [src]="randomCat"
+        />
       </div>
     </div>
   </div>
