@@ -6,14 +6,20 @@
         <div class="col-12 col-md-6">
           <div class="card text-white bg-success">
             <div class="card-body">
-              <h3 class="card-title text-center">Dog Rating</h3>
-              <div class="container-fluid text-center">
-                <h1 class="card-text">
-                  <span *ngIf="dogScore.dogRating !== 0">{{
-                    dogScore.dogRating
-                  }}</span>
-                  <span *ngIf="dogScore.dogRating == 0">10</span>
-                </h1>
+              <div class="row">
+                <div class="col-7 p-0">
+                  <h4 class="card-title text-center">Dog Rating</h4>
+                </div>
+                <div class="col-5 p-0">
+                  <div class="container-fluid text-center">
+                    <h3 class="card-text">
+                      <span *ngIf="dogScore.dogRating !== 0">{{
+                        dogScore.dogRating
+                      }}</span>
+                      <span *ngIf="dogScore.dogRating == 0">10</span>
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -21,9 +27,15 @@
         <div class="col-12 col-md-6">
           <div class="card text-white bg-danger">
             <div class="card-body">
-              <h3 class="card-title text-center">Dogs Wins</h3>
-              <div class="container-fluid text-center">
-                <h1 class="card-text">{{ dogScore.dogWins }}</h1>
+              <div class="row">
+                <div class="col-7 p-0">
+                  <h4 class="card-title text-center">Dogs Wins</h4>
+                </div>
+                <div class="col-5 p-0">
+                  <div class="container-fluid text-center">
+                    <h3 class="card-text">{{ dogScore.dogWins }}</h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -47,9 +59,15 @@
         <div class="col-12 col-md-6">
           <div class="card text-white bg-info">
             <div class="card-body">
-              <h3 class="card-title text-center">Cat Wins</h3>
-              <div class="container-fluid text-center">
-                <h1 class="card-text">{{ catScore.catWins }}</h1>
+              <div class="row">
+                <div class="col-7 p-0">
+                  <h4 class="card-title text-center">Cat Wins</h4>
+                </div>
+                <div class="col-5 p-0">
+                  <div class="container-fluid text-center">
+                    <h3 class="card-text">{{ catScore.catWins }}</h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -57,14 +75,20 @@
         <div class="col-12 col-md-6">
           <div class="card text-white bg-success">
             <div class="card-body">
-              <h3 class="card-title text-center">Cat Rating</h3>
-              <div class="container-fluid text-center">
-                <h1 class="card-text">
-                  <span *ngIf="catScore.catRating !== 0">
-                    {{ catScore.catRating }}</span
-                  >
-                  <span *ngIf="catScore.catRating == 0">10</span>
-                </h1>
+              <div class="row">
+                <div class="col-7 p-0">
+                  <h4 class="card-title text-center">Cat Rating</h4>
+                </div>
+                <div class="col-5 p-0">
+                  <div class="container-fluid text-center">
+                    <h3 class="card-text">
+                      <span *ngIf="catScore.catRating !== 0">
+                        {{ catScore.catRating }}</span
+                      >
+                      <span *ngIf="catScore.catRating == 0">10</span>
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -274,11 +298,11 @@
               10
             </button>
           </div>
-          <div class="row">
-            <span *ngIf="petToRate" class="text-white"
-              >Nice! Now lets give your {{ petToRate }} a rating</span
-            >
-          </div>
+        </div>
+        <div class="row text-center">
+          <span *ngIf="petToRate" class="text-white"
+            >Nice! Now lets give your {{ petToRate }} a rating</span
+          >
         </div>
       </div>
     </div>

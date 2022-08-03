@@ -3,35 +3,47 @@
   <div class="row justify-content-center">
     <div class="col-12 col-sm-12 col-md-4">
       <div class="row">
-        <div class="col-6 col-md-12 mb-1">
+        <div class="col-6 col-md-12 mb-1 p-0">
           <div class="card text-white bg-success">
-            <div class="card-body">
-              <h3 class="card-title text-center">
-                Dog Rating<span *ngIf="randomCatChance == 1">!?</span>
-              </h3>
-              <div class="container-fluid text-center">
-                <h1 *ngIf="randomCatChance !== 1" class="card-text">
-                  <span *ngIf="dogScore.dogRating !== 0">{{
-                    dogScore.dogRating
-                  }}</span>
-                  <span *ngIf="dogScore.dogRating == 0">10</span>
-                </h1>
-                <h1 *ngIf="randomCatChance == 1" class="card-text">
-                  <span *ngIf="catScore.catRating !== 0">{{
-                    catScore.catRating
-                  }}</span>
-                  <span *ngIf="catScore.catRating == 0">10</span>
-                </h1>
+            <div class="card-body card-body-rating">
+              <div class="row">
+                <div class="col-7 col-sm-7 col-md-12 p-0">
+                  <h5 class="card-title text-center">
+                    Dog Rating<span *ngIf="randomCatChance == 1">!?</span>
+                  </h5>
+                </div>
+                <div class="col-5 col-sm-5 col-md-12 p-0">
+                  <div class="container-fluid text-center">
+                    <h4 *ngIf="randomCatChance !== 1" class="card-text">
+                      <span *ngIf="dogScore.dogRating !== 0">{{
+                        dogScore.dogRating
+                      }}</span>
+                      <span *ngIf="dogScore.dogRating == 0">10</span>
+                    </h4>
+                    <h4 *ngIf="randomCatChance == 1" class="card-text">
+                      <span *ngIf="catScore.catRating !== 0">{{
+                        catScore.catRating
+                      }}</span>
+                      <span *ngIf="catScore.catRating == 0">10</span>
+                    </h4>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-6 col-md-12">
+        <div class="col-6 col-md-12 mb-1 p-0">
           <div class="card text-white bg-primary">
             <div class="card-body">
-              <h3 class="card-title text-center">All Dogs Average</h3>
-              <div class="container-fluid text-center">
-                <h1 class="card-text">{{ dogScore.dogAvg }}</h1>
+              <div class="row">
+                <div class="col-7 col-sm-7 col-md-12 p-0">
+                  <h5 class="card-title text-center">All Dogs Average</h5>
+                </div>
+                <div class="col-5 col-sm-5 col-md-12 p-0">
+                  <div class="container-fluid text-center">
+                    <h4 class="card-text">{{ dogScore.dogAvg }}</h4>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -86,7 +98,7 @@
             <div
               *ngIf="!badLastRating"
               type="button"
-              class="btn btn-danger"
+              class="btn btn-danger btn-rate"
               (click)="onRateButton(1)"
             >
               1
@@ -94,7 +106,7 @@
             <div
               *ngIf="!badLastRating"
               type="button"
-              class="btn btn-danger"
+              class="btn btn-danger btn-rate"
               (click)="onRateButton(2)"
             >
               2
@@ -102,7 +114,7 @@
             <div
               *ngIf="!badLastRating"
               type="button"
-              class="btn btn-danger"
+              class="btn btn-danger btn-rate"
               (click)="onRateButton(3)"
             >
               3
@@ -110,7 +122,7 @@
             <div
               *ngIf="!badLastRating"
               type="button"
-              class="btn btn-warning"
+              class="btn btn-warning btn-rate"
               (click)="onRateButton(4)"
             >
               4
@@ -118,7 +130,7 @@
             <div
               *ngIf="!badLastRating"
               type="button"
-              class="btn btn-warning"
+              class="btn btn-warning btn-rate"
               (click)="onRateButton(5)"
             >
               5
@@ -126,7 +138,7 @@
             <div
               *ngIf="!badLastRating"
               type="button"
-              class="btn btn-warning"
+              class="btn btn-warning btn-rate"
               (click)="onRateButton(6)"
             >
               6
@@ -134,28 +146,28 @@
 
             <div
               type="button"
-              class="btn btn-success"
+              class="btn btn-success btn-rate"
               (click)="onRateButton(7)"
             >
               7
             </div>
             <div
               type="button"
-              class="btn btn-success"
+              class="btn btn-success btn-rate"
               (click)="onRateButton(8)"
             >
               8
             </div>
             <div
               type="button"
-              class="btn btn-success"
+              class="btn btn-success btn-rate"
               (click)="onRateButton(9)"
             >
               9
             </div>
             <div
               type="button"
-              class="btn btn-primary"
+              class="btn btn-primary btn-rate"
               (click)="onRateButton(10)"
             >
               10

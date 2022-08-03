@@ -9,6 +9,7 @@ import { DogsService } from 'src/app/services/dogs.service';
 export class WelcomeComponent implements OnInit {
   randomDog1!: string;
   randomDog2!: string;
+  randomDog3!: string;
 
   constructor(private dogsService: DogsService) {}
 
@@ -18,6 +19,9 @@ export class WelcomeComponent implements OnInit {
     });
     this.dogsService.getRandomDog().subscribe((data) => {
       this.randomDog2 = data.message;
+    });
+    this.dogsService.getRandomDog().subscribe((data) => {
+      this.randomDog3 = data.message;
     });
   }
 }

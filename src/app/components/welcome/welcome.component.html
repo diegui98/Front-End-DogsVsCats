@@ -3,10 +3,10 @@
     <h1>Welcome to the Good Dog List</h1>
   </div>
   <div class="row content-center">
-    <div class="col-6 col-sm-6 col-md-3">
+    <div class="sm-hide col-md-3">
       <img class="border border-success rounded" [src]="randomDog1" alt="Dog" />
     </div>
-    <div class="col-6 col-sm-6 col-md-6">
+    <div class="col-10 col-sm-10 col-md-6">
       <div class="row content-center">
         <div class="col-10">
           <img src="../../../assets/paw-love.png" alt="paw love" />
@@ -28,8 +28,11 @@
         </button>
       </div>
     </div>
-    <div class="col-10 col-sm-10 col-md-3 mt-1">
+    <div class="col-6 col-sm-6 col-md-3 mt-1">
       <img class="border border-success rounded" [src]="randomDog2" alt="Dog" />
+    </div>
+    <div class="col-6 col-sm-6 sm-show hide mt-1">
+      <img class="border border-success rounded" [src]="randomDog3" alt="Dog" />
     </div>
   </div>
 </div>

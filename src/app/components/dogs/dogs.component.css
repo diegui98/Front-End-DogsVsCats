@@ -11,7 +11,7 @@ img {
 }
 
 .img-col {
-  max-height: 75vmin;
+  max-height: 80vmin;
   margin-bottom: 2vmin;
 }
 
@@ -26,5 +26,20 @@ img {
 
 .bottom-container {
   position: absolute;
-  bottom: 1vmin;
+  bottom: 0;
+  width: 90%;
+}
+
+@media (max-width: 767px) {
+  .card-body-rating {
+    padding-bottom: 27px;
+  }
+
+  .card {
+    --bs-card-spacer-y: 0.25rem;
+  }
+
+  .card-title {
+    margin-bottom: 0.1rem !important;
+  }
 }

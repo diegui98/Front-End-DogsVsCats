@@ -22,7 +22,19 @@ img {
 .card {
   max-height: 25vmin;
   margin-bottom: 3%;
-  --bs-card-spacer-y: 0.5rem;
+  --bs-card-spacer-y: 0.25rem;
+}
+
+.card-title {
+  margin-bottom: 0.1rem !important;
+}
+
+.btn-toolbar {
+  width: 100% !important;
+}
+
+.btn-group {
+  width: 95% !important;
 }
 
 @media (max-width: 767px) {

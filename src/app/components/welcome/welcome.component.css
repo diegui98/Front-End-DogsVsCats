@@ -6,6 +6,20 @@ img {
   place-content: center;
 }
 
+@media (max-width: 767px) {
+  .sm-hide {
+    display: none;
+  }
+
+  .sm-show {
+    display: block !important;
+  }
+}
+
+.hide {
+  display: none;
+}
+
 .btn-76,
 .btn-76 *,
 .btn-76 :after,

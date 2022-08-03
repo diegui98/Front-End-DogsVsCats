@@ -8,3 +8,8 @@ body {
   background-color: blueviolet;
   min-height: 100%;
 }
+
+.btn-rate {
+  --bs-btn-padding-x: 0.4rem !important;
+  --bs-btn-padding-y: 0.2rem !important;
+}
